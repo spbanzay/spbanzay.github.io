@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.21">
-<title>Версии</title>
+<title>Создание задчи (POST)</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -436,37 +436,94 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </head>
 <body class="article">
 <div id="header">
+<h1>Создание задчи (POST)</h1>
 </div>
 <div id="content">
-<div class="sect1">
-<h2 id="_версии">Версии</h2>
+<div id="preamble">
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_0_1_0">[0.1.0]</h3>
+<div class="paragraph">
+<p>Метод создания задачи.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_входные_параметры">Входные параметры</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Входные параметры приведены в таблице ниже.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Входные параметры</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Параметр</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Ключ</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Тип</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Не пустой</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Описание</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Заголовок</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Однострочный текст</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">true</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Краткое описание задачи.</p>
+<p class="tableblock">Длинна не более 255 символов</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Описание</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">description</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Многострочный текст</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">false</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Полное описание задачи, что необходимо сделать</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_выходные_параметры">Выходные параметры</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Выходные параметры:</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Добавлено описание метода создания задачи.</p>
+<p>в случае успеха вернуть идентификатор созданной задачи (task_id);</p>
+</li>
+<li>
+<p>иначе вернуть описание ошибки.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_0_0_0">[0.0.0]</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Описана структура данных.</p>
-</li>
-</ul>
 </div>
+<div class="sect1">
+<h2 id="_алгоритм">Алгоритм</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Алгоритм работы метода приведён на диаграмме.</p>
+</div>
+<div class="imageblock"><div class="content"><img class="plantuml" src="https://www.plantuml.com/plantuml/png/~1U9nbZq4AWa0OXVTpYbdc5NAH1saJf2IOHTf-KAA5hhn0T0CHHS6iAxp_HhqHYg3T_sQ-zzx_UqcwEQNdVQJKF2crn4qCdcXGOyI05iD7IoRbEaOZ5-eManJeD5xyC8GVw0WOALobma0lKFrozFs1DklRGchbw7JdnxIsg1sxofq1lLMsMdEiPt6Ld2L-bFXa9nj7se-tOM1D5HyCy_BPnB53Bpb6AIMpIQwzzN1KogE5fxy1QwIM_000" /></div></div>
+<div class="paragraph">
+<p><a href="../index.html">Назад</a></p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2024-02-26 22:14:19 +0600
+Last updated 2024-02-26 22:16:20 +0600
 </div>
 </div>
 </body>
