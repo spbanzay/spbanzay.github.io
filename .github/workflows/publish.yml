@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Check GITHUB_TOKEN permissions
         run: |
-        echo "Checking token permissions..."
-        curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
+          echo "Checking token permissions..."
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/user
 
       - name: Checkout repository
         uses: actions/checkout@v2
