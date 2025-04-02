@@ -13,9 +13,11 @@ jobs:
       - name: Process Documents
         run: PLANTUML_URL="https://www.plantuml.com/plantuml"
           PLANTUML_ENCODING="deflate"
-          asciidoctor -r asciidoctor-plantuml -D build/site -R asciidoc **/*.adoc
+          asciidoctor -r asciidoctor-plantuml -D build/site -R src/docs/asciidoc **/*.adoc
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/site
+          publish_branch: gh-pages  # Явно указываем ветку
+          force_orphan: true  # Позволяет создать ветку заново
